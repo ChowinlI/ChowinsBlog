@@ -5,8 +5,7 @@
       <main>
 
       </main>
-      <v-footer>
-      </v-footer>
+      <v-footer></v-footer>
     </div>
       <!--<canvas id="canvas" class="canvas"></canvas>-->
   </div>

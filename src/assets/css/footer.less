@@ -4,10 +4,10 @@ footer{
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 24px 0 !important;
+  padding: .24rem 0 !important;
 
   .footer-wrap{
-    width: 1140px;
+    width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -49,6 +49,141 @@ footer{
       font-size: 16px;
       color: #ffffff;
       text-align: right;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+  }
+
+  /* 超小屏幕（手机，小于 768px） */
+  @media screen and (max-width: 767px) {
+    .footer-wrap{
+      width: 100%;
+      margin: 0 auto;
+
+      .recommend{
+        width: 100%;
+        font-size: .16rem;
+        .recommend-label{
+          width: 56px;
+        }
+        .recommend-wrap{
+          width: calc(100% - 56px);
+          .recommend-item{
+            margin-bottom: 14px;
+            &:not(:last-child){
+              margin-right: 16px;
+            }
+          }
+        }
+        .iconfont{
+          font-size: .16rem;
+        }
+      }
+
+      .cpr{
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+  }
+
+  /* 小屏幕（平板，大于等于 768px） */
+  @media screen and (min-width: 768px) {
+    .footer-wrap{
+      width: 768px;
+      margin: 0 auto;
+
+      .recommend{
+        width: 100%;
+        font-size: 14px;
+        .recommend-label{
+          width: 124px;
+        }
+        .recommend-wrap{
+          width: calc(100% - 124px);
+          .recommend-item{
+            margin-bottom: 17px;
+            &:not(:last-child){
+              margin-right: 20px;
+            }
+          }
+        }
+        .iconfont{
+          font-size: 14px;
+        }
+      }
+
+      .cpr{
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+  }
+
+  /* 中等屏幕（桌面显示器，大于等于 992px） */
+  @media screen and (min-width: 992px) {
+    .footer-wrap{
+      width: 992px;
+      margin: 0 auto;
+
+      .recommend{
+        width: 100%;
+        font-size: 14px;
+        .recommend-label{
+          width: 124px;
+        }
+        .recommend-wrap{
+          width: calc(100% - 124px);
+          .recommend-item{
+            margin-bottom: 17px;
+            &:not(:last-child){
+              margin-right: 20px;
+            }
+          }
+        }
+        .iconfont{
+          font-size: 14px;
+        }
+      }
+
+      .cpr{
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+  }
+
+  /* 大屏幕（大桌面显示器，大于等于 1200px） */
+  @media screen and (min-width: 1200px) {
+    .footer-wrap{
+      width: 1200px;
+      margin: 0 auto;
+
+      .recommend{
+        width: 100%;
+        font-size: 16px;
+        .recommend-label{
+          width: 150px;
+        }
+        .recommend-wrap{
+          width: calc(100% - 150px);
+          .recommend-item{
+            margin-bottom: 20px;
+            &:not(:last-child){
+              margin-right: 24px;
+            }
+          }
+        }
+        .iconfont{
+          font-size: 16px;
+        }
+      }
+
+      .cpr{
+        width: 100%;
+        font-size: 16px;
+      }
     }
   }
 }
