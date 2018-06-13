@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: Handwriting;
+  src: url('../font/MFQingShu_Noncommercial-Regular.ttf');
+}
+li {
+  list-style: none;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, "Microsoft YaHei", arial, STHeiTi, sans-serif;
+}
+a,
+a:link,
+a:visited,
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+@media screen and (min-width: 300px) {
+  html,
+  body {
+    font-size: 45px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html,
+  body {
+    font-size: 60px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html,
+  body {
+    font-size: 80px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html,
+  body {
+    font-size: 100px;
+  }
+}
