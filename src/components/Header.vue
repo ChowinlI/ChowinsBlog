@@ -1,21 +1,19 @@
 <template>
     <header id="header">
-      <div class="nav">
-        <nav>
-          <div class="logo">Chowin的博客</div>
-          <li class="nav-item"><router-link to="">首页</router-link></li>
-          <li class="nav-item"><router-link to="">学无止境</router-link></li>
-          <li class="nav-item"><router-link to="">供想时间</router-link></li>
-          <li class="nav-item"><router-link to="">关于我</router-link></li>
-        </nav>
-        <div class="search" id="search">
-          <div class="input-wrap">
-            <input type="text" name="search">
-            <div class="input-empty">×</div>
-          </div>
-          <div class="search-btn"><i class="iconfont icon-search"></i><span>&nbsp;搜索</span></div>
+      <div class="pf-wrap">
+        <div class="pf-picture">
+          <div class="pf-picture-wrap"><img src="../assets/images/pf-photo.jpg" alt=""></div>
         </div>
+        <div class="pf-name"><span class="name">Chowin</span></div>
+        <div class="pf-intro">一个懂得挖掘生活中的乐趣的Web前端爱好者,兼段子手</div>
       </div>
+      <nav class="nav">
+        <div class="nav-list">
+          <div class="nav-list-item"><i class="iconfont icon-search"></i></div>
+          <div class="nav-list-item"><i class="iconfont icon-menu"></i></div>
+        </div>
+      </nav>
+      <div class="header-bg"></div>
     </header>
 </template>
 
@@ -27,5 +25,5 @@
 
 <style lang="less">
   @import "../assets/css/header.less";
-  @import "//at.alicdn.com/t/font_694553_5f4tvxhd0d4.css";
+  @import "//at.alicdn.com/t/font_694553_5nayanagr09.css";
 </style>

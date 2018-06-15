@@ -1,350 +1,123 @@
 header{
-  width: 100%;
-  background-color: #222222;
-  position: fixed;
-  top: 0;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, .2);
+  position: relative;
+  font-family: Handwriting;
+
+  .pf-wrap{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .pf-picture{
+      //width: 10rem;
+      //height: 10rem;
+      margin: 0 auto 0;
+      padding: .4rem;
+      background: rgba(255,255,255,0.3);
+      border-radius: 50%;
+      overflow: hidden;
+
+      .pf-picture-wrap{
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        overflow: hidden;
+        img{
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .pf-name{
+      margin-top: .6rem;
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 0 4px rgba(0,0,0,0.5);
+      vertical-align: text-bottom;
+      .name{
+        display: inline;
+        font-size: 2.2rem;
+
+      }
+    }
+
+    .pf-intro{
+      font-size: 1.6rem;
+      margin-top: .4rem;
+      text-align: center;
+      color: #fff;
+      line-height: 1.8rem;
+      text-shadow: 0 0 .4rem rgba(0,0,0,0.5);
+    }
+  }
 
   .nav{
-    width: 1200px;
-    height: 80px;
-    margin: 0 auto;
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    justify-content: flex-end;
 
-    nav{
+    .nav-list{
       display: flex;
       align-items: center;
-      .logo{
-        height: 80px;
-        line-height: 80px;
-        font-size: .24rem;
-        font-weight: 600;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 8px;
-        margin-right: 16px;
+
+      .nav-list-item{
+        padding: 0 .6rem;
         color: #ffffff;
-      }
-
-      .nav-item{
-        font-size: .16rem;
-        height: 35px;
-        line-height: 35px;
-        padding: 5px 20px;
-        color: #ffffff;
-      }
-    }
-
-    .search{
-      display: flex;
-      align-content: center;
-      justify-content: flex-end;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      .input-wrap{
-        font-size: 16px;
-        display: flex;
-        align-content: center;
-        justify-content: flex-start;
-        height: 35px;
-        -webkit-border-radius: 35px;
-        -moz-border-radius: 35px;
-        border-radius: 35px;;
-        background-color: #ffffff;
-        overflow: hidden;
-        input{
-          display: block;
-          width: 150px;
-          height: 35px;
-          border: none;
-          outline: none;
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
-          padding-left: 20px;
-        }
-        .input-empty{
-          width: 25px;
-          height: 35px;
-          text-align: center;
-          line-height: 35px;
-          color: #222222;
-          cursor: pointer;
-        }
-
-      }
-      .search-btn{
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 20px;
-        font-size: 16px;
-        color: #ffffff;
-        display: flex;
-        text-align: center;
-        height: 35px;
-        line-height: 35px;
-
-        .iconfont{
-          font-size: .16rem;
+        &:not(:last-child){
+          margin-right: 1rem;
         }
       }
     }
   }
 
-  /* 超小屏幕（手机，小于 768px） */
-  @media screen and (max-width: 767px) {
-    .nav{
-      width: 100%;
-      height: 50px;
-
-      nav{
-        display: flex;
-        align-items: center;
-        .logo{
-          height: 66px;
-          line-height: 66px;
-          font-size: 20px;
-          padding: 0 6px;
-          margin-right: 11px;
-        }
-
-        .nav-item{
-          display: none;
-          font-size: 14px;
-          height: 26px;
-          line-height: 26px;
-          padding: 4px 16px;
-        }
-      }
-
-      .search{
-        display: flex;
-        align-content: center;
-        justify-content: flex-end;
-        .input-wrap{
-          font-size: 14px;
-          height: 26px;
-          -webkit-border-radius: 26px;
-          -moz-border-radius: 26px;
-          border-radius: 26px;
-          input{
-            display: block;
-            width: 120px;
-            height: 26px;
-            padding-left: 16px;
-          }
-          .input-empty{
-            width: 20px;
-            height: 26px;
-            line-height: 26px;
-          }
-
-        }
-        .search-btn{
-          padding: 0 16px;
-          font-size: 14px;
-          height: 26px;
-          line-height: 26px;
-
-          .iconfont{
-            font-size: 14px;
-          }
-        }
-      }
-    }
+  .header-bg{
+    z-index: -1;
+    position: absolute;
+    height: 30rem;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: url('../images/banner.jpg') no-repeat;
+    background-size: cover;
   }
 
-  /* 小屏幕（平板，大于等于 768px） */
-  @media screen and (min-width: 768px) {
-    .nav{
-      width: 768px;
-      height: 66px;
+}
 
-      nav{
-        display: flex;
-        align-items: center;
-        .logo{
-          height: 66px;
-          line-height: 66px;
-          font-size: 20px;
-          padding: 0 6px;
-          margin-right: 11px;
-        }
+@media screen and (max-width: 768px) {
+  header{
+    height: 24rem;
 
-        .nav-item{
-          font-size: 14px;
-          height: 26px;
-          line-height: 26px;
-          padding: 4px 16px;
+    .pf-wrap{
+      height: 24rem;
+      .pf-picture{
+        .pf-picture-wrap{
+          width: 8rem;
+          height: 8rem;
         }
       }
-
-      .search{
-        display: flex;
-        align-content: center;
-        justify-content: flex-end;
-        .input-wrap{
-          font-size: 14px;
-          height: 26px;
-          -webkit-border-radius: 26px;
-          -moz-border-radius: 26px;
-          border-radius: 26px;
-          input{
-            display: block;
-            width: 120px;
-            height: 26px;
-            padding-left: 16px;
-          }
-          .input-empty{
-            width: 20px;
-            height: 26px;
-            line-height: 26px;
-          }
-
+      .pf-name{
+        .name{
+          font-size: 2rem;
         }
-        .search-btn{
-          padding: 0 16px;
-          font-size: 14px;
-          height: 26px;
-          line-height: 26px;
-
-          .iconfont{
-            font-size: 14px;
-          }
-        }
+      }
+      .pf-intro{
+          font-size: 1.4rem;
       }
     }
-  }
-
-  /* 中等屏幕（桌面显示器，大于等于 992px） */
-  @media screen and (min-width: 992px) {
-    .nav{
-      width: 992px;
-      height: 66px;
-
-      nav{
-        display: flex;
-        align-items: center;
-        .logo{
-          height: 66px;
-          line-height: 66px;
-          font-size: 20px;
-          padding: 0 6px;
-          margin-right: 11px;
-        }
-
-        .nav-item{
-          font-size: 14px;
-          height: 26px;
-          line-height: 26px;
-          padding: 4px 16px;
-        }
-      }
-
-      .search{
-        display: flex;
-        align-content: center;
-        justify-content: flex-end;
-        .input-wrap{
-          font-size: 14px;
-          height: 26px;
-          -webkit-border-radius: 26px;
-          -moz-border-radius: 26px;
-          border-radius: 26px;
-          input{
-            display: block;
-            width: 120px;
-            height: 26px;
-            padding-left: 16px;
-          }
-          .input-empty{
-            width: 20px;
-            height: 26px;
-            line-height: 26px;
-          }
-
-        }
-        .search-btn{
-          padding: 0 16px;
-          font-size: 14px;
-          height: 26px;
-          line-height: 26px;
-
-          .iconfont{
-            font-size: 14px;
-          }
-        }
-      }
-    }
-  }
-
-  /* 大屏幕（大桌面显示器，大于等于 1200px） */
-  @media screen and (min-width: 1200px) {
-    .nav{
-      width: 1200px;
-      height: 80px;
-
-      nav{
-        display: flex;
-        align-items: center;
-        .logo{
-          height: 80px;
-          line-height: 80px;
-          font-size: 24px;
-          padding: 0 8px;
-          margin-right: 16px;
-        }
-
-        .nav-item{
-          font-size: 16px;
-          height: 35px;
-          line-height: 35px;
-          padding: 5px 20px;
-        }
-      }
-
-      .search{
-        display: flex;
-        align-content: center;
-        justify-content: flex-end;
-        .input-wrap{
-          font-size: 16px;
-          height: 35px;
-          -webkit-border-radius: 35px;
-          -moz-border-radius: 35px;
-          border-radius: 35px;
-          input{
-            display: block;
-            width: 150px;
-            height: 35px;
-            padding-left: 20px;
-          }
-          .input-empty{
-            width: 25px;
-            height: 35px;
-            line-height: 35px;
-            color: #222222;
-          }
-
-        }
-        .search-btn{
-          padding: 0 20px;
-          font-size: 16px;
-          height: 35px;
-          line-height: 35px;
-
-          .iconfont{
-            font-size: 16px;
-          }
-        }
-      }
+    .header-bg{
+      height: 24rem;
     }
   }
 }
