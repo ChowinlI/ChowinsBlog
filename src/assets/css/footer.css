@@ -1,51 +1,8 @@
 footer {
-  width: 100%;
-  background-color: #222222;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 24px 0 !important;
+  font-family: Handwriting;
 }
-footer .footer-wrap {
-  width: 1140px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-footer .footer-wrap .recommend {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  font-size: 16px;
-  color: #ffffff;
-}
-footer .footer-wrap .recommend .recommend-label {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 150px;
-  text-align: center;
-}
-footer .footer-wrap .recommend .recommend-wrap {
-  width: calc(-50%);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-footer .footer-wrap .recommend .recommend-wrap .recommend-item {
-  margin-bottom: 20px;
-}
-footer .footer-wrap .recommend .recommend-wrap .recommend-item:not(:last-child) {
-  margin-right: 24px;
-}
-footer .footer-wrap .recommend .iconfont {
-  font-size: 16px;
-}
-footer .footer-wrap .cpr {
-  width: 100%;
-  font-size: 16px;
-  color: #ffffff;
-  text-align: right;
+footer .cpr {
+  font-size: 1.4rem;
+  margin: auto;
+  color: #3d3d3d;
 }

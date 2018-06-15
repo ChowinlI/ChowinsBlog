@@ -1,184 +1,123 @@
 header{
-  width: 100%;
-  background-color: #222222;
-  position: fixed;
-  top: 0;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, .2);
+  position: relative;
+  font-family: Handwriting;
 
-  .nav{
-    width: 1140px;
-    height: 80px;
-    margin: 0 auto;
+  .pf-wrap{
+    position: absolute;
+    width: 100%;
+    height: 300px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
 
-    nav{
-      display: flex;
-      align-items: center;
-      .logo{
-        height: 80px;
-        line-height: 80px;
-        font-size: 24px;
-        font-weight: 600;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 8px;
-        margin-right: 16px;
-        color: #ffffff;
-      }
+    .pf-picture{
+      //width: 10rem;
+      //height: 10rem;
+      margin: 0 auto 0;
+      padding: .4rem;
+      background: rgba(255,255,255,0.3);
+      border-radius: 50%;
+      overflow: hidden;
 
-      .nav-item{
-        font-size: 16px;
-        height: 35px;
-        line-height: 35px;
-        padding: 5px 20px;
-        color: #ffffff;
+      .pf-picture-wrap{
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        overflow: hidden;
+        img{
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
       }
     }
 
-    .search{
-      display: flex;
-      align-content: center;
-      justify-content: flex-end;
-      .input-wrap{
-        font-size: 16px;
-        display: flex;
-        align-content: center;
-        justify-content: flex-start;
-        height: 35px;
-        -webkit-border-radius: 35px;
-        -moz-border-radius: 35px;
-        border-radius: 35px;;
-        background-color: #ffffff;
-        overflow: hidden;
-        input{
-          display: block;
-          width: 150px;
-          height: 35px;
-          border: none;
-          outline: none;
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
-          padding-left: 20px;
-        }
-        .input-empty{
-          width: 25px;
-          height: 35px;
-          text-align: center;
-          line-height: 35px;
-          color: #222222;
-          cursor: pointer;
-        }
+    .pf-name{
+      margin-top: .6rem;
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 0 4px rgba(0,0,0,0.5);
+      vertical-align: text-bottom;
+      .name{
+        display: inline;
+        font-size: 2.2rem;
 
       }
-      .search-btn{
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0 20px;
-        font-size: 16px;
-        color: #ffffff;
-        display: flex;
-        text-align: center;
-        height: 35px;
-        line-height: 35px;
+    }
 
-        .iconfont{
-          font-size: 16px;
+    .pf-intro{
+      font-size: 1.6rem;
+      margin-top: .4rem;
+      text-align: center;
+      color: #fff;
+      line-height: 1.8rem;
+      text-shadow: 0 0 .4rem rgba(0,0,0,0.5);
+    }
+  }
+
+  .nav{
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .nav-list{
+      display: flex;
+      align-items: center;
+
+      .nav-list-item{
+        padding: 0 .6rem;
+        color: #ffffff;
+        &:not(:last-child){
+          margin-right: 1rem;
         }
       }
     }
   }
 
-  @media screen and (max-width: 1139px){
-    .nav{
-      width: 960px;
-      height: 68px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+  .header-bg{
+    z-index: -1;
+    position: absolute;
+    height: 30rem;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: url('../images/banner.jpg') no-repeat;
+    background-size: cover;
+  }
 
-      nav{
-        display: flex;
-        align-items: center;
-        .logo{
-          height: 68px;
-          line-height: 68px;
-          font-size: 20px;
-          font-weight: 600;
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
-          padding: 0 6px;
-          margin-right: 14px;
-          color: #ffffff;
-        }
+}
 
-        .nav-item{
-          font-size: 14px;
-          height: 28px;
-          line-height: 28px;
-          padding: 4px 18px;
-          color: #ffffff;
+@media screen and (max-width: 768px) {
+  header{
+    height: 24rem;
+
+    .pf-wrap{
+      height: 24rem;
+      .pf-picture{
+        .pf-picture-wrap{
+          width: 8rem;
+          height: 8rem;
         }
       }
-
-      .search{
-        display: flex;
-        align-content: center;
-        justify-content: flex-end;
-        .input-wrap{
-          font-size: 16px;
-          display: flex;
-          align-content: center;
-          justify-content: flex-start;
-          height: 35px;
-          -webkit-border-radius: 35px;
-          -moz-border-radius: 35px;
-          border-radius: 35px;;
-          background-color: #ffffff;
-          overflow: hidden;
-          input{
-            display: block;
-            width: 150px;
-            height: 35px;
-            border: none;
-            outline: none;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            padding-left: 20px;
-          }
-          .input-empty{
-            width: 25px;
-            height: 35px;
-            text-align: center;
-            line-height: 35px;
-            color: #222222;
-            cursor: pointer;
-          }
-
-        }
-        .search-btn{
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
-          padding: 0 20px;
-          font-size: 16px;
-          color: #ffffff;
-          display: flex;
-          text-align: center;
-          height: 35px;
-          line-height: 35px;
-
-          .iconfont{
-            font-size: 16px;
-          }
+      .pf-name{
+        .name{
+          font-size: 2rem;
         }
       }
+      .pf-intro{
+          font-size: 1.4rem;
+      }
+    }
+    .header-bg{
+      height: 24rem;
     }
   }
 }

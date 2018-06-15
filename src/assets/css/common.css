@@ -1,16 +1,35 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 @font-face {
   font-family: Handwriting;
   src: url('../font/MFQingShu_Noncommercial-Regular.ttf');
 }
-li {
-  list-style: none;
+html {
+  font-size: 10px;
+  height: 100%;
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, "Microsoft YaHei", arial, STHeiTi, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /*chrome、safari*/
+  -moz-osx-font-smoothing: grayscale;
+  /*firefox*/
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  color: #404040;
+  line-height: 1.7;
+  height: 100%;
+}
+ul,
+li,
+p {
+  list-style: none;
 }
 a,
 a:link,
@@ -20,27 +39,48 @@ a:hover {
   text-decoration: none;
   color: inherit;
 }
-@media screen and (min-width: 300px) {
-  html,
-  body {
-    font-size: 45px;
+#app {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+#app .header,
+#app .footer {
+  flex: 0 0 auto;
+}
+#app .main {
+  flex: 1 0 auto;
+  order: 1;
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+#app .main .main-wrapper {
+  width: 80%;
+  max-width: 80rem;
+  transition: all .4s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2rem .5rem;
+}
+#app .footer {
+  order: 3;
+  display: flex;
+  height: 10rem;
+}
+@media screen and (max-width: 768px) {
+  #app .main-wrapper {
+    width: 100% !important;
+  }
+  #app .footer {
+    height: 6rem;
   }
 }
-@media screen and (min-width: 768px) {
-  html,
-  body {
-    font-size: 60px;
-  }
+.fade-transition {
+  transition: all .4s ease;
 }
-@media screen and (min-width: 992px) {
-  html,
-  body {
-    font-size: 80px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  html,
-  body {
-    font-size: 100px;
-  }
+.fade-enter,
+.fade-leave {
+  opacity: 0;
 }
