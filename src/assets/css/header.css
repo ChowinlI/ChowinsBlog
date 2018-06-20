@@ -1,5 +1,5 @@
 header {
-  height: 30rem;
+  height: 25rem;
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.2);
@@ -9,7 +9,7 @@ header {
 header .pf-wrap {
   position: absolute;
   width: 100%;
-  height: 300px;
+  height: 25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,6 +59,7 @@ header .nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  z-index: 10;
 }
 header .nav .nav-list {
   display: flex;
@@ -71,22 +72,38 @@ header .nav .nav-list .nav-list-item {
 header .nav .nav-list .nav-list-item:not(:last-child) {
   margin-right: 1rem;
 }
+header .nav-scroll {
+  background: #f3f7fa;
+  opacity: .8;
+  box-shadow: 0 0 5px 0 #333;
+}
+header .nav-scroll .nav-list {
+  display: flex;
+  align-items: center;
+}
+header .nav-scroll .nav-list .nav-list-item {
+  padding: 0 .6rem;
+  color: #333333;
+}
+header .nav-scroll .nav-list .nav-list-item:not(:last-child) {
+  margin-right: 1rem;
+}
 header .header-bg {
   z-index: -1;
   position: absolute;
-  height: 30rem;
+  height: 25rem;
   width: 100%;
   left: 0;
   top: 0;
-  background: url('../images/banner.jpg') no-repeat;
+  background: no-repeat center;
   background-size: cover;
 }
 @media screen and (max-width: 768px) {
   header {
-    height: 24rem;
+    height: 20rem;
   }
   header .pf-wrap {
-    height: 24rem;
+    height: 20rem;
   }
   header .pf-wrap .pf-picture .pf-picture-wrap {
     width: 8rem;
@@ -98,7 +115,13 @@ header .header-bg {
   header .pf-wrap .pf-intro {
     font-size: 1.4rem;
   }
+  header .nav {
+    padding: .3rem 1rem;
+  }
+  header .nav .nav-list .nav-list-item {
+    padding: 0 .6rem;
+  }
   header .header-bg {
-    height: 24rem;
+    height: 20rem;
   }
 }
