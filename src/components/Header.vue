@@ -9,21 +9,48 @@
       </div>
       <nav class="nav">
         <div class="nav-list">
+          <router-link class="nav-list-item" to="/index">首页</router-link>
+          <router-link class="nav-list-item" to="/toast">吐槽</router-link>
+          <router-link class="nav-list-item" to="/friends">dalao</router-link>
+          <router-link class="nav-list-item" to="/about">关于我</router-link>
           <div class="nav-list-item"><i class="iconfont icon-search"></i></div>
-          <div class="nav-list-item"><i class="iconfont icon-menu"></i></div>
         </div>
       </nav>
-      <div class="header-bg"></div>
+      <div class="header-bg" :style="{ backgroundImage: 'url('+banner+')'}"></div>
     </header>
 </template>
 
 <script type="text/ecmascript-6">
+    $(function () {
+      var h = $('#header').height();
+      $(window).on("scroll", function(){
+        var s_top = $(document).scrollTop();
+        if(s_top >= h){
+          $('.nav').addClass('nav-scroll');
+          $('.back-top').fadeIn(500);
+          $('.pf-wrap').fadeOut(500);
+          $('.header-bg').fadeOut(500);
+        }else {
+          $('.nav').removeClass('nav-scroll');
+          $('.back-top').fadeOut(500);
+          $('.pf-wrap').fadeIn(500);
+          $('.header-bg').fadeIn(500);
+        }
+      })
+    })
     export default{
-        props: []
+        props: [],
+        data(){
+            return {
+                banner: require('../assets/images/banner.jpg')
+            }
+        },
+        created(){
+
+        }
     }
 </script>
 
 <style lang="less">
   @import "../assets/css/header.less";
-  @import "//at.alicdn.com/t/font_694553_5nayanagr09.css";
 </style>

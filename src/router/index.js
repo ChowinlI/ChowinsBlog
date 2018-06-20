@@ -2,7 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 /** webpack模板懒加载方法 */
 const index = resolve => require.ensure([], () => resolve(require('@/pages/Index.vue')), 'index');
-const home = resolve => require.ensure([], () => resolve(require('@/pages/Home.vue')), 'home');
+const friends = resolve => require.ensure([], () => resolve(require('@/pages/Friends.vue')), 'friends');
+const roast = resolve => require.ensure([], () => resolve(require('@/pages/Roast.vue')), 'roast');
+const about = resolve => require.ensure([], () => resolve(require('@/pages/About.vue')), 'about');
 
 Vue.use(Router)
 
@@ -19,9 +21,19 @@ export default new Router({
       component: index
     },
     {
-      path: '/home',
-      name: 'Home',
-      component: home
+      path: '/friends',
+      name: 'Friends',
+      component: friends
     },
+    {
+      path: '/roast',
+      name: 'Roast',
+      component: roast
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: about
+    }
   ]
 })

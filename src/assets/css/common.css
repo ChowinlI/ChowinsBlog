@@ -4,12 +4,14 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 @font-face {
   font-family: Handwriting;
   src: url('../font/MFQingShu_Noncommercial-Regular.ttf');
 }
 html {
+  -webkit-text-size-adjust: none;
   font-size: 10px;
   height: 100%;
 }
@@ -53,11 +55,10 @@ a:hover {
   order: 1;
   display: flex;
   justify-content: center;
-  background-color: #f5f5f5;
 }
 #app .main .main-wrapper {
   width: 80%;
-  max-width: 80rem;
+  max-width: 78rem;
   transition: all .4s;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -69,9 +70,57 @@ a:hover {
   display: flex;
   height: 10rem;
 }
+#app .back-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  height: 5rem;
+  width: 5rem;
+  z-index: 998;
+  font-size: 2rem;
+  box-sizing: content-box;
+  color: #333;
+  text-align: center;
+  border-radius: 100%;
+  filter: alpha(opacity=70);
+  -moz-opacity: .7;
+  opacity: .7;
+  -khtml-opacity: .7;
+}
+#app .back-top:hover .back-top-border {
+  -webkit-animation: toproll 8s linear infinite normal;
+  -moz-animation: toproll 8s linear infinite normal;
+  animation: toproll 8s linear infinite normal;
+}
+#app .back-top .back-top-border {
+  z-index: -1;
+  display: block;
+  position: absolute;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 100%;
+  border: .3rem dashed #d9e8bf;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #e7e7e7;
+  box-shadow: 0 0 0.5rem #000000;
+  -webkit-animation: toproll 12s linear infinite normal;
+  -moz-animation: toproll 12s linear infinite normal;
+  animation: toproll 12s linear infinite normal;
+}
+#app .back-top .iconfont {
+  display: inline-block;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  line-height: 2.5rem;
+  margin-top: 1.25rem;
+  cursor: pointer;
+}
 @media screen and (max-width: 768px) {
   #app .main-wrapper {
     width: 100% !important;
+    padding: 0 .8rem;
   }
   #app .footer {
     height: 6rem;
@@ -83,4 +132,28 @@ a:hover {
 .fade-enter,
 .fade-leave {
   opacity: 0;
+}
+@keyframes toproll {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes toproll {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes toproll {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
 }

@@ -9,18 +9,160 @@
     </div>
     <section class="article-list">
       <div class="article-list-item">
-        <div class="article-picture-wrap"><img class="article-picture" src="../assets/images/article_default.jpg" alt=""></div>
-        <div class="article-info">
-          <div class="article-info-title">这个博客有 丶 东西</div>
-          <div class="article-info-desc">噢？是吗（︶︿︶）＝╭∩╮</div>
-          <div class="article-info-belong"><span class="author">Chowin</span> <span class="created_at">2018-06-15 17:10</span></div>
+        <div class="article-info-wrap">
+          <div class="article-author-img">
+            <img src="../assets/images/pf-photo.jpg">
+          </div>
+          <div class="vertical-line-div">
+            <div class="vertical-line"></div>
+          </div>
+          <div class="article-info">
+            <div class="article-info-title">
+              <a href="">这个博客有 丶 东西</a>
+            </div>
+            <div class="article-info-others">
+              <span class="author"><a href="">Chowin</a></span>
+              <span class="created_at"><a href="">2018-06-15 17:10</a></span>
+            </div>
+          </div>
         </div>
+        <div class="article-picture-wrap"><img class="article-picture" src="../assets/images/cat.png" alt=""></div>
+        <div class="article-summary-div">
+          <a href="">
+            <p class="article-summary-p">噢？是吗（︶︿︶）＝╭∩╮</p>
+          </a>
+        </div>
+        <div class="article-tags"><div class="article-tags-item">真皮沙发</div></div>
+      </div>
+      <div class="article-list-item">
+        <div class="article-info-wrap">
+          <div class="article-author-img">
+            <img src="../assets/images/pf-photo.jpg">
+          </div>
+          <div class="vertical-line-div">
+            <div class="vertical-line"></div>
+          </div>
+          <div class="article-info">
+            <div class="article-info-title">
+              <a href="">这个博客有 丶 东西</a>
+            </div>
+            <div class="article-info-others">
+              <span class="author"><a href="">Chowin</a></span>
+              <span class="created_at"><a href="">2018-06-15 17:10</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="article-picture-wrap"><img class="article-picture" src="../assets/images/cat.png" alt=""></div>
+        <div class="article-summary-div">
+          <a href="">
+            <p class="article-summary-p">噢？是吗（︶︿︶）＝╭∩╮</p>
+          </a>
+        </div>
+        <div class="article-tags"><div class="article-tags-item">真皮沙发</div></div>
+      </div>
+      <div class="article-list-item">
+        <div class="article-info-wrap">
+          <div class="article-author-img">
+            <img src="../assets/images/pf-photo.jpg">
+          </div>
+          <div class="vertical-line-div">
+            <div class="vertical-line"></div>
+          </div>
+          <div class="article-info">
+            <div class="article-info-title">
+              <a href="">这个博客有 丶 东西</a>
+            </div>
+            <div class="article-info-others">
+              <span class="author"><a href="">浏览&nbsp;16</a></span>
+              <span class="author"><a href="">评论&nbsp;5</a></span>
+              <span class="author"><a href="">Chowin</a></span>
+              <span class="created_at"><a href="">2018-06-15 17:10</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="article-picture-wrap"><img class="article-picture" src="../assets/images/cat.png" alt=""></div>
+        <div class="article-summary-div">
+          <a href="">
+            <p class="article-summary-p">噢？是吗（︶︿︶）＝╭∩╮</p>
+          </a>
+        </div>
+        <div class="article-tags"><div class="article-tags-item">真皮沙发</div></div>
+      </div>
+      <div class="article-list-item">
+        <div class="article-info-wrap">
+          <div class="article-author-img">
+            <img src="../assets/images/pf-photo.jpg">
+          </div>
+          <div class="vertical-line-div">
+            <div class="vertical-line"></div>
+          </div>
+          <div class="article-info">
+            <div class="article-info-title">
+              <a href="">这个博客有 丶 东西</a>
+            </div>
+            <div class="article-info-others">
+              <span class="author"><a href="">Chowin</a></span>
+              <span class="created_at"><a href="">2018-06-15 17:10</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="article-picture-wrap"><img class="article-picture" src="../assets/images/cat.png" alt=""></div>
+        <div class="article-summary-div">
+          <a href="">
+            <p class="article-summary-p">噢？是吗（︶︿︶）＝╭∩╮</p>
+          </a>
+        </div>
+        <div class="article-tags"><div class="article-tags-item">真皮沙发</div></div>
+      </div>
+      <div class="article-list-item">
+        <div class="article-info-wrap">
+          <div class="article-author-img">
+            <img src="../assets/images/pf-photo.jpg">
+          </div>
+          <div class="vertical-line-div">
+            <div class="vertical-line"></div>
+          </div>
+          <div class="article-info">
+            <div class="article-info-title">
+              <a href="">这个博客有 丶 东西</a>
+            </div>
+            <div class="article-info-others">
+              <span class="author"><a href="">Chowin</a></span>
+              <span class="created_at"><a href="">2018-06-15 17:10</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="article-picture-wrap"><img class="article-picture" src="../assets/images/cat.png" alt=""></div>
+        <div class="article-summary-div">
+          <a href="">
+            <p class="article-summary-p">噢？是吗（︶︿︶）＝╭∩╮</p>
+          </a>
+        </div>
+        <div class="article-tags"><div class="article-tags-item">真皮沙发</div></div>
       </div>
     </section>
   </div>
 </template>
 
 <script>
+  $(function () {
+    showArticle();
+    $(window).on("scroll", function(){
+      showArticle();
+    })
+  })
+
+  function showArticle(){
+    var article_item = $('.article-list-item');
+    var h = window.innerHeight;
+    for(var i = 0; i < article_item.length; i++){
+      var s_top=$(document).scrollTop();
+      var t = article_item[i].offsetTop - s_top; //元素距浏览器可视区域顶端的距离
+      if((t-h) < -20){
+        article_item[i].style.left = '0';
+      }
+    }
+  }
 
 export default {
   name: 'Index',
@@ -30,6 +172,7 @@ export default {
     }
   },
   created(){
+
 
   },
   mounted(){
@@ -42,7 +185,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-  @import "//at.alicdn.com/t/font_694553_5nayanagr09.css";
   @import "../assets/css/common.less";
   @import "../assets/css/index.less";
 </style>
