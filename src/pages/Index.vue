@@ -158,7 +158,7 @@
     for(var i = 0; i < article_item.length; i++){
       var s_top=$(document).scrollTop();
       var t = article_item[i].offsetTop - s_top; //元素距浏览器可视区域顶端的距离
-      if((t-h) < -20){
+      if((t-h) < -50){
         article_item[i].style.left = '0';
       }
     }
@@ -171,12 +171,12 @@ export default {
 
     }
   },
-  created(){
 
+  created(){
+    $('body,html').animate({scrollTop:1},100);
 
   },
   mounted(){
-
   },
   methods:{
   }

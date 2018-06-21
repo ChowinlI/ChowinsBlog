@@ -2,7 +2,9 @@
   <div id="app">
     <v-header class="header"></v-header>
     <div class="main">
-      <router-view class="main-wrapper" transition="fade" transition-mode="out-in" />
+      <transition name="fade" mode="out-in">
+        <router-view class="main-wrapper" />
+      </transition>
     </div>
     <v-footer class="footer"></v-footer>
     <div class="back-top" @click="scrollToTop">
@@ -27,7 +29,7 @@
   },
   methods:{
     scrollToTop(){
-        $('html').animate({scrollTop:0},300);
+        $('body,html').animate({scrollTop:0},600);
     }
   }
 }

@@ -139,13 +139,46 @@ a, a:link, a:visited, a:focus, a:hover {
   }
 }
 
-.fade-transition {
-  transition: all .4s ease;
+.fade-enter-active {
+  animation: router-fade .5s;
+}
+.fade-leave-active {
+  animation: router-fade .5s reverse;
 }
 
-.fade-enter, .fade-leave {
-  opacity: 0;
+@keyframes router-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
+
+@-webkit-keyframes router-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@-moz-keyframes router-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 
 @keyframes toproll {
   from {
