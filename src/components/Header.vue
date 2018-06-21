@@ -10,7 +10,7 @@
       <nav class="nav">
         <div class="nav-list">
           <router-link class="nav-list-item" to="/index">首页</router-link>
-          <router-link class="nav-list-item" to="/toast">吐槽</router-link>
+          <router-link class="nav-list-item" to="/roast">吐槽</router-link>
           <router-link class="nav-list-item" to="/friends">dalao</router-link>
           <router-link class="nav-list-item" to="/about">关于我</router-link>
           <div class="nav-list-item"><i class="iconfont icon-search"></i></div>
