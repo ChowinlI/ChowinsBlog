@@ -1,11 +1,14 @@
 #index {
-  font-family: Handwriting;
+  position: relative;
 }
 #index .tags {
   width: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1rem 0 0;
 }
 #index .tags .tags-item {
   padding: .2rem .6rem;
@@ -17,6 +20,8 @@
   border: thin dashed #d5d5d5;
   margin-bottom: 1rem;
   box-shadow: 0 0 3px #333;
+  -webkit-box-shadow: 0 0 3px #333;
+  -moz-box-shadow: 0 0 3px #333;
   cursor: pointer;
 }
 #index .tags .tags-item:hover {
@@ -42,30 +47,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 4px;
   overflow: hidden;
 }
 #index .article-list .article-list-item {
   width: 100%;
   position: relative;
-  border-bottom: 2px dotted #dadada;
+  padding: 1.5rem 1.2rem 1.5rem;
+  -webkit-border-radius: .4rem;
+  -moz-border-radius: .4rem;
+  border-radius: .4rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding-bottom: 1rem;
   -webkit-transition: all ease-out 0.8s;
   -moz-transition: all ease-out 0.8s;
   -ms-transition: all ease-out 0.8s;
   transition: all ease-out 0.8s;
-  padding-top: 1.5rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 0 3px #333;
+  -webkit-box-shadow: 0 0 3px #333;
+  -moz-box-shadow: 0 0 3px #333;
+  background-color: rgba(243, 247, 250, 0.5);
 }
 #index .article-list .article-list-item:nth-child(odd) {
   left: 100%;
 }
 #index .article-list .article-list-item:nth-child(even) {
   left: -100%;
-}
-#index .article-list .article-list-item:hover {
-  border-bottom: 2px solid #dadada;
 }
 #index .article-list .article-list-item .article-info-wrap {
   width: 100%;
@@ -171,7 +183,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -209,7 +221,7 @@
 @media screen and (max-width: 768px) {
   #index .tags .tags-item {
     padding: .1rem .4rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   #index .article-list {
     width: 100%;

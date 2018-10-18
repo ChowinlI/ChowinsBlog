@@ -1,6 +1,6 @@
 <template>
     <header id="header">
-      <div class="pf-wrap">
+      <div class="pf-wrap" :style="{ backgroundImage: 'url('+banner+')'}">
         <div class="pf-picture">
           <div class="pf-picture-wrap"><img src="../assets/images/pf-photo.jpg" alt=""></div>
         </div>
@@ -16,7 +16,7 @@
           <div class="nav-list-item"><i class="iconfont icon-search"></i></div>
         </div>
       </nav>
-      <div class="header-bg" :style="{ backgroundImage: 'url('+banner+')'}"></div>
+      <!--<div class="header-bg" :style="{ backgroundImage: 'url('+banner+')'}"></div>-->
     </header>
 </template>
 

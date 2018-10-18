@@ -8,7 +8,7 @@
       <div class="tags-item">你怎么说</div>
     </div>
     <section class="article-list">
-      <div class="article-list-item">
+      <div class="article-list-item" v-scroll-slide>
         <div class="article-info-wrap">
           <div class="article-author-img">
             <img src="../assets/images/pf-photo.jpg">
@@ -34,7 +34,7 @@
         </div>
         <div class="article-tags"><div class="article-tags-item">真皮沙发</div></div>
       </div>
-      <div class="article-list-item">
+      <div class="article-list-item" v-scroll-slide>
         <div class="article-info-wrap">
           <div class="article-author-img">
             <img src="../assets/images/pf-photo.jpg">
@@ -60,7 +60,7 @@
         </div>
         <div class="article-tags"><div class="article-tags-item">真皮沙发</div></div>
       </div>
-      <div class="article-list-item">
+      <div class="article-list-item" v-scroll-slide>
         <div class="article-info-wrap">
           <div class="article-author-img">
             <img src="../assets/images/pf-photo.jpg">
@@ -88,7 +88,7 @@
         </div>
         <div class="article-tags"><div class="article-tags-item">真皮沙发</div></div>
       </div>
-      <div class="article-list-item">
+      <div class="article-list-item" v-scroll-slide>
         <div class="article-info-wrap">
           <div class="article-author-img">
             <img src="../assets/images/pf-photo.jpg">
@@ -114,7 +114,7 @@
         </div>
         <div class="article-tags"><div class="article-tags-item">真皮沙发</div></div>
       </div>
-      <div class="article-list-item">
+      <div class="article-list-item" v-scroll-slide>
         <div class="article-info-wrap">
           <div class="article-author-img">
             <img src="../assets/images/pf-photo.jpg">
@@ -145,27 +145,29 @@
 </template>
 
 <script>
-  $(function () {
-    showArticle();
-    $(window).on("scroll", function(){
-      showArticle();
-    })
-  })
-
-  function showArticle(){
-    var article_item = $('.article-list-item');
-    var h = window.innerHeight;
-    for(var i = 0; i < article_item.length; i++){
-      var s_top=$(document).scrollTop();
-      var t = article_item[i].offsetTop - s_top; //元素距浏览器可视区域顶端的距离
-      if((t-h) < -50){
-        article_item[i].style.left = '0';
-      }
-    }
-  }
 
 export default {
   name: 'Index',
+  directives: { // 页面滚动时文章列表子项左右切入
+    scrollSlide:{
+        inserted:function (el) {
+          var h = window.innerHeight;
+          var s_top = $(window).scrollTop(); //相当于是窗口垂直方向已滚动的距离
+          var t = $(el).offset().top + $("#header").height() - s_top; //元素距浏览器可视区域顶端的距离
+          //$("#header").height()是头部的高度，因为offsetTop是相对$('#index')即article_item[i]的offsetParent来计算的
+          if((t-h) < -50){
+            $(el).css('left',0);
+          }
+          $(window).on('scroll',function () {
+            var s_top = $(window).scrollTop(); //相当于是窗口垂直方向已滚动的距离
+            var t = $(el).offset().top + $("#header").height() - s_top; //元素距浏览器可视区域顶端的距离
+            if((t-h) < -50){
+              $(el).css('left',0);
+            }
+          })
+        }
+    }
+  },
   data () {
     return {
 
@@ -177,6 +179,7 @@ export default {
 
   },
   mounted(){
+
   },
   methods:{
   }
