@@ -18,7 +18,7 @@
       -webkit-border-radius: .4rem;
       -moz-border-radius: .4rem;
       border-radius: .4rem;
-      border: thin dashed #d5d5d5;
+      //border: thin dashed #d5d5d5;
       margin-bottom: 1rem;
       box-shadow: 0 0 3px #333;
       -webkit-box-shadow: 0 0 3px #333;
@@ -66,7 +66,7 @@
       width: 100%;
       position: relative;
       //border-bottom: 2px dotted #dadada;
-      padding: 1.5rem 1.2rem 1.5rem;
+      padding: 1.5rem 1.2rem;
       -webkit-border-radius: .4rem;
       -moz-border-radius: .4rem;
       border-radius: .4rem;
@@ -79,22 +79,20 @@
       -ms-transition: all ease-out .8s;
       transition: all ease-out .8s;
       margin-bottom: 1.2rem;
-      box-shadow: 0 0 3px #333;
-      -webkit-box-shadow: 0 0 3px #333;
-      -moz-box-shadow: 0 0 3px #333;
-      background-color: rgba(243,247,250,.5);
+      //box-shadow: 0 0 3px #333;
+      //-webkit-box-shadow: 0 0 3px #333;
+      //-moz-box-shadow: 0 0 3px #333;
+      background-color: rgba(255,255,255,.8);
+      opacity: .2;
 
-      &:nth-child(odd) {
-        left: 100%;
-      }
+      //&:nth-child(odd) {
+      //  left: 100%;
+      //}
+      //
+      //&:nth-child(even) {
+      //  left: -100%;
+      //}
 
-      &:nth-child(even) {
-        left: -100%;
-      }
-
-      &:hover {
-        //border-bottom: 2px solid #dadada;
-      }
 
       .article-info-wrap {
         width: 100%;
@@ -113,8 +111,8 @@
           -moz-transition: all ease-in-out .5s;
           -ms-transition: all ease-in-out .5s;
 
-          &:hover {
-            border-color: #9C9;
+          &:hover{
+            border-color: lighten(#dcb65b,10%);
             transform: rotate(360deg);
             -webkit-transform: rotate(360deg);
             -moz-transform: rotate(360deg);
@@ -122,7 +120,7 @@
             -ms-transform: rotate(360deg)
           }
 
-          img {
+          img{
             display: block;
             width: 100%;
             height: 100%;
@@ -163,7 +161,7 @@
             -ms-transition: all ease-in-out .5s;
 
             &:hover{
-              color: #ffb1bd;
+              color: lighten(#dcb65b,10%);
             }
           }
 
@@ -171,7 +169,7 @@
             span{
               font-size: 1.4rem;
               &:hover{
-                color: #ffb1bd;
+                color: lighten(#dcb65b,10%);
               }
               &:not(:last-child){
                 margin-right: 4px;

@@ -40,7 +40,10 @@ a:hover {
 #app {
   display: flex;
   flex-flow: column;
-  background: #d9e8bf fixed;
+  height: 100%;
+  overflow: auto;
+  background: linear-gradient(#ffffff, #e5c985) fixed;
+  padding-bottom: 2rem;
 }
 #app .header,
 #app .footer {
@@ -71,13 +74,16 @@ a:hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 .5rem;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 #app .footer {
   order: 3;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 10rem;
-  background-color: #ffffff;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8));
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   overflow: hidden;
@@ -86,8 +92,8 @@ a:hover {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  height: 5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 3rem;
   z-index: 998;
   font-size: 2rem;
   box-sizing: content-box;
@@ -108,10 +114,10 @@ a:hover {
   z-index: -1;
   display: block;
   position: absolute;
-  height: 5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 3rem;
   border-radius: 100%;
-  border: .3rem dashed #d9e8bf;
+  border: 0.3rem dashed #e5c985;
   box-sizing: border-box;
   cursor: pointer;
   background-color: #e7e7e7;
@@ -125,8 +131,8 @@ a:hover {
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  line-height: 2.5rem;
-  margin-top: 1.25rem;
+  line-height: 1.5rem;
+  margin-top: 0.75rem;
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {

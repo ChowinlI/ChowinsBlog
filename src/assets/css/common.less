@@ -1,4 +1,4 @@
-@primary-color: #dcb65b;
+@primary-color: lighten(#dcb65b,10%);
 @side-color: #222222;
 @black: #000000;
 @white: #ffffff;
@@ -12,10 +12,6 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-//@font-face {
-//  font-family: Handwriting;
-//  src: url('../font/MFQingShu_Noncommercial-Regular.ttf');
-//}
 
 html {
   -webkit-text-size-adjust: none;
@@ -24,7 +20,7 @@ html {
 }
 
 body {
-  -webkit-font-smoothing: antialiased; /*chrome、safari*/
+  -webkit-font-smoothing: antialiased;/*chrome、safari*/
   -moz-osx-font-smoothing: grayscale; /*firefox*/
   font-size: 1.6rem;
   margin: 0;
@@ -47,8 +43,11 @@ a, a:link, a:visited, a:focus, a:hover {
 #app {
   display: flex;
   flex-flow: column;
-  //height: 100%;
-  background: #d9e8bf fixed;
+  height: 100%;
+  overflow: auto;
+  background: linear-gradient(#ffffff,@primary-color) fixed;
+  padding-bottom: 2rem;
+
 
   .header, .footer {
     flex: 0 0 auto;
@@ -88,18 +87,18 @@ a, a:link, a:visited, a:focus, a:hover {
       padding: 0 .5rem;
       //border-left: thin solid #333333;
       //border-right: thin solid #333333;
-      //box-shadow: 0 0 3px #333;
-      //-webkit-box-shadow: 0 0 3px #333;
-      //-moz-box-shadow: 0 0 3px #333;
-      background-color: #ffffff;
+      background-color: rgba(255,255,255,.3);
     }
   }
 
   .footer {
     order: 3;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 10rem;
-    background-color: #ffffff;
+    background-image: linear-gradient(rgba(255,255,255,.3),rgba(255,255,255,.8));
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     overflow: hidden;
@@ -109,8 +108,8 @@ a, a:link, a:visited, a:focus, a:hover {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    height: 5rem;
-    width: 5rem;
+    height: 3rem;
+    width: 3rem;
     z-index: 998;
     text-align: center;
     font-size: 2rem;
@@ -133,10 +132,10 @@ a, a:link, a:visited, a:focus, a:hover {
       z-index: -1;
       display: block;
       position: absolute;
-      height: 5rem;
-      width: 5rem;
+      height: 3rem;
+      width: 3rem;
       border-radius: 100%;
-      border: .3rem dashed #d9e8bf;
+      border: .3rem dashed @primary-color;
       box-sizing: border-box;
       cursor: pointer;
       background-color: #e7e7e7;
@@ -151,8 +150,8 @@ a, a:link, a:visited, a:focus, a:hover {
       font-size: inherit;
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
-      line-height: 2.5rem;
-      margin-top: 1.25rem;
+      line-height: 1.5rem;
+      margin-top: 0.75rem;
       cursor: pointer;
     }
   }
