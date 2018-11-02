@@ -27,7 +27,7 @@ export default class BigCircle {
     ctx.beginPath()
     ctx.arc(this.x, this.y, this.bR, 0, 2 * Math.PI)
     ctx.closePath()
-    ctx.strokeStyle = 'rgba(128, 128, 128, ' + this.op + ')'
+    ctx.strokeStyle = 'rgba(250, 250, 250, ' + this.op + ')'
     ctx.stroke()
   }
 

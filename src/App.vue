@@ -111,10 +111,10 @@
 </script>
 
 <style>
-  @import "//at.alicdn.com/t/font_694553_rglpkm3axpj.css";
+  @import "//at.alicdn.com/t/font_694553_mfgrkkjgaf.css";
   @import "./assets/css/common.css";
   #app{
     /*width: 100%;*/
-    /*height: 100%;*/
+    height: 100%;
   }
 </style>

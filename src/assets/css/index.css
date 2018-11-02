@@ -1,3 +1,118 @@
+@keyframes show-fade-up {
+  from {
+    opacity: 0;
+    bottom: -8rem;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+@keyframes router-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes router-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-moz-keyframes router-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes toproll {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes toproll {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes toproll {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes links {
+  0% {
+    -webkit-transform: rotate(-2deg);
+  }
+  100% {
+    -webkit-transform: rotate(2deg);
+  }
+}
+@-webkit-keyframes navDown {
+  0% {
+    opacity: 0;
+    transform: scale(1) translateY(-10em);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@-webkit-keyframes articleUp {
+  0% {
+    opacity: 0;
+    transform: scale(1) translateY(10em);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes toTop {
+  0% {
+    opacity: 0;
+    transform: translateX(10em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 #index {
   position: relative;
 }
@@ -56,19 +171,14 @@
   width: 100%;
   position: relative;
   padding: 1.5rem 1.2rem;
-  -webkit-border-radius: .4rem;
-  -moz-border-radius: .4rem;
-  border-radius: .4rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: all ease-out 0.8s;
-  -moz-transition: all ease-out 0.8s;
-  -ms-transition: all ease-out 0.8s;
-  transition: all ease-out 0.8s;
   margin-bottom: 1.2rem;
   background-color: rgba(255, 255, 255, 0.8);
-  opacity: .2;
+  -webkit-animation: articleUp .8s;
+  animation: articleUp .8s;
+  border-bottom: thin dashed #c8c8c8;
 }
 #index .article-list .article-list-item .article-info-wrap {
   width: 100%;
@@ -88,7 +198,7 @@
   -ms-transition: all ease-in-out 0.5s;
 }
 #index .article-list .article-list-item .article-info-wrap .article-author-img:hover {
-  border-color: #e5c985;
+  border-color: #ffb733;
   transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
@@ -133,13 +243,13 @@
   -ms-transition: all ease-in-out 0.5s;
 }
 #index .article-list .article-list-item .article-info-wrap .article-info .article-info-title:hover {
-  color: #e5c985;
+  color: #ffb733;
 }
 #index .article-list .article-list-item .article-info-wrap .article-info .article-info-others span {
   font-size: 1.4rem;
 }
 #index .article-list .article-list-item .article-info-wrap .article-info .article-info-others span:hover {
-  color: #e5c985;
+  color: #ffb733;
 }
 #index .article-list .article-list-item .article-info-wrap .article-info .article-info-others span:not(:last-child) {
   margin-right: 4px;
@@ -164,6 +274,7 @@
   font-size: 1.8rem;
   line-height: 1.6;
   text-indent: 2em;
+  text-align: justify;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -187,7 +298,6 @@
   -webkit-border-radius: .4rem;
   -moz-border-radius: .4rem;
   border-radius: .4rem;
-  border: thin dashed #d5d5d5;
   box-shadow: 0 0 3px #333;
   cursor: pointer;
 }
@@ -237,16 +347,6 @@
   }
   #index .article-list .article-list-item .article-tags .article-tags-item {
     padding: .1rem .4rem;
-    font-size: 1.4rem;
-  }
-}
-@keyframes show-fade-up {
-  from {
-    opacity: 0;
-    bottom: -8rem;
-  }
-  to {
-    opacity: 1;
-    bottom: 0;
+    font-size: 1.2rem;
   }
 }

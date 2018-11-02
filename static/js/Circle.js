@@ -22,7 +22,7 @@ export default class Circle{
     this.x = this.opos.x = x
     this.y = this.opos.y = y
 
-    this.colors = ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C']
+    this.colors = ['#bee1e5', '#d9e8bf', '#fff2a4', '#ffb1bd']
     this.color = this.colors[random(0, this.colors.length)];
     this.tpos = endpos(x, y)
   }

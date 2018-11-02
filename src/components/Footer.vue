@@ -12,5 +12,4 @@
 
 <style lang="less">
   @import "../assets/css/footer.less";
-  @import "//at.alicdn.com/t/font_694553_5nayanagr09.css";
 </style>
