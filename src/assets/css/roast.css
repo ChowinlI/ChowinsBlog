@@ -113,10 +113,10 @@
     transform: translateX(0);
   }
 }
-#about {
+#roast {
   width: 100%;
 }
-#about .about-section {
+#roast .roast-section {
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -124,63 +124,54 @@
   padding: 4px;
   color: #333333;
 }
-#about .about-section .about-title {
+#roast .roast-section .roast-title {
   width: 100%;
   text-align: center;
   padding: 1rem 0;
   font-size: 2.4rem;
   font-weight: 600;
 }
-#about .about-section hr {
+#roast .roast-section hr {
   margin: 10px 0;
   border: 0;
   border-top: thin solid #ddd;
   border-bottom: thin solid #ffffff;
 }
-#about .about-section blockquote {
+#roast .roast-section blockquote {
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-left: 2px solid #ffb733;
-  height: 3rem;
+  padding: .8rem 0 .8rem 1rem;
   line-height: 3rem;
-  padding-left: 1rem;
   font-size: 1.8rem;
   margin: 1.6rem 0;
 }
-#about .about-section .about-pic {
-  width: 100%;
+#roast .roast-section blockquote .blockquote-title {
+  color: #cc8400;
 }
-#about .about-section .about-pic img {
-  display: block;
-  max-width: 100%;
-  margin: auto;
+#roast .roast-section blockquote .blockquote-paragraph {
+  text-indent: 2em;
+  text-align: justify;
 }
-#about .about-section .about-prologue {
-  padding: 1rem 0;
-  font-size: 1.8rem;
-}
-#about .about-section .about-paragraph {
+#roast .roast-section .roast-paragraph {
   font-size: 1.8rem;
   text-indent: 2em;
   text-align: justify;
   margin-bottom: .4rem;
 }
-#about .about-section .about-paragraph a {
+#roast .roast-section .roast-paragraph a {
   color: #ffb733;
 }
 @media screen and (max-width: 768px) {
-  #about .about-section .about-title {
+  #roast .roast-section .roast-title {
     font-size: 2rem;
   }
-  #about .about-section blockquote {
+  #roast .roast-section blockquote {
     font-size: 1.6rem;
   }
-  #about .about-section .about-prologue {
-    font-size: 1.6rem;
-  }
-  #about .about-section .about-paragraph {
+  #roast .roast-section .roast-paragraph {
     font-size: 1.6rem;
   }
 }

@@ -1,6 +1,7 @@
 <template>
   <div id="index">
       <!--<canvas id="canvas" class="canvas"></canvas>-->
+    <div class="index-title"># 首页</div>
     <div class="tags">
       <div class="tags-item">学无止境</div>
       <div class="tags-item">供想时间</div>
@@ -71,7 +72,7 @@ export default {
             author_pf: require('../assets/images/pf-photo2.jpg'),
             author_id: 1,
             created_time: "2018-06-15 17:10",
-            page: '',
+            page: require('../assets/images/page.jpg'),
             desc: "有的事情，平常心对待就好……",
             tags: [{name:"真皮沙发",id:1}]
         },
@@ -81,7 +82,7 @@ export default {
           author_pf: require('../assets/images/pf-photo2.jpg'),
           author_id: 1,
           created_time: "2018-06-15 17:10",
-          page: '',
+          page: require('../assets/images/page.jpg'),
           desc: "探险家贝爷曾说：万物去头皆可食……",
           tags: [{name:"真皮沙发",id:1}]
         }

@@ -1,9 +1,9 @@
 @import "keyframes";
 
-#about{
+#roast{
   width: 100%;
 
-  .about-section{
+  .roast-section{
     width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -11,7 +11,7 @@
     padding: 4px;
     color: #333333;
 
-    .about-title{
+    .roast-title{
       width: 100%;
       text-align: center;
       padding: 1rem 0;
@@ -30,26 +30,21 @@
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       border-left: 2px solid @primary-color;
-      height: 3rem;
+      padding: .8rem 0 .8rem 1rem;
       line-height: 3rem;
-      padding-left: 1rem;
       font-size: 1.8rem;
       margin: 1.6rem 0;
-    }
-    .about-pic{
-      width: 100%;
 
-      img{
-        display: block;
-        max-width: 100%;
-        margin: auto;
+      .blockquote-title{
+        color: darken(@primary-color,20%);
+      }
+
+      .blockquote-paragraph{
+        text-indent: 2em;
+        text-align: justify;
       }
     }
-    .about-prologue{
-      padding: 1rem 0;
-      font-size: 1.8rem;
-    }
-    .about-paragraph{
+    .roast-paragraph{
       font-size: 1.8rem;
       text-indent: 2em;
       text-align: justify;
@@ -60,24 +55,21 @@
       }
     }
   }
-
 }
 
 @media screen and (max-width: 768px) {
-  #about{
-    .about-section{
-      .about-title{
+  #roast{
+    .roast-section{
+      .roast-title{
         font-size: 2rem;
       }
       blockquote{
         font-size: 1.6rem;
       }
-      .about-prologue{
-        font-size: 1.6rem;
-      }
-      .about-paragraph{
+      .roast-paragraph{
         font-size: 1.6rem;
       }
     }
+
   }
 }

@@ -1,7 +1,7 @@
 <template>
     <div id="friends">
       <section class="friends-section">
-        <h3 class="friends-section-title"># dalao们的TP眼位：</h3>
+        <h3 class="friends-title"># dalao们的TP眼位：</h3>
         <ul class="friends-ul">
           <li class="friends-li" v-for="item in friends">
             <div class="friends-li-div">

@@ -121,6 +121,10 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+*::-webkit-scrollbar {
+  width: 0;
+  background: rgba(0, 0, 0, 0);
+}
 html {
   -webkit-text-size-adjust: none;
   font-size: 10px;
@@ -157,7 +161,6 @@ a:hover {
   flex-flow: column;
   height: 100%;
   overflow: auto;
-  padding-bottom: 2rem;
 }
 #app .header,
 #app .footer {

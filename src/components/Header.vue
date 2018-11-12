@@ -10,15 +10,17 @@
           <div class="nav-list">
             <router-link class="nav-list-item" to="/index">首页</router-link>
             <router-link class="nav-list-item" to="/roast">吐槽</router-link>
+            <router-link class="nav-list-item" to="/roast">归档</router-link>
             <router-link class="nav-list-item" to="/friends">dalao</router-link>
             <router-link class="nav-list-item" to="/about">关于我</router-link>
           </div>
         </nav>
         <nav class="collapse-nav">
-          <div class="collapse" @click="collapse_show=!collapse_show"><i class="iconfont icon-menu"></i></div>
+          <div class="collapse" @click="showCollapseNav"><i class="iconfont icon-menu"></i></div>
           <ul class="bar" v-if="collapse_show">
             <li @click="collapse_show=!collapse_show"><router-link to="/index">首页</router-link></li>
             <li @click="collapse_show=!collapse_show"><router-link to="/roast">吐槽</router-link></li>
+            <li @click="collapse_show=!collapse_show"><router-link to="/file">归档</router-link></li>
             <li @click="collapse_show=!collapse_show"><router-link to="/friends">dalao</router-link></li>
             <li @click="collapse_show=!collapse_show"><router-link to="/about">关于我</router-link></li>
           </ul>
@@ -60,8 +62,11 @@
                 collapse_show: false
             }
         },
-        created(){
-
+        created(){},
+        methods:{
+            showCollapseNav(){
+              this.collapse_show=!this.collapse_show;
+            }
         }
     }
 </script>

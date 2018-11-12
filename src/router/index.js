@@ -6,6 +6,7 @@ const friends = resolve => require.ensure([], () => resolve(require('@/pages/Fri
 const roast = resolve => require.ensure([], () => resolve(require('@/pages/Roast.vue')), 'roast');
 const about = resolve => require.ensure([], () => resolve(require('@/pages/About.vue')), 'about');
 const article = resolve => require.ensure([], () => resolve(require('@/pages/Article.vue')), 'article');
+const file = resolve => require.ensure([], () => resolve(require('@/pages/File.vue')), 'file');
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/roast',
       name: 'Roast',
       component: roast
+    },
+    {
+      path: '/file',
+      name: 'File',
+      component: file
     },
     {
       path: '/about',

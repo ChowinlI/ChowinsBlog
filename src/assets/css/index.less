@@ -2,7 +2,16 @@
 
 #index {
   position: relative;
+  padding: 4px;
   //font-family: Handwriting;
+
+  .index-title{
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
 
   .tags {
     width: 100%;
@@ -11,7 +20,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 1rem 0 0;
+    //padding: 1rem 0 0;
 
     .tags-item {
       padding: .2rem .6rem;
@@ -79,7 +88,7 @@
       //-ms-transition: all ease-out .8s;
       //transition: all ease-out .8s;
       //opacity: .2;
-      margin-bottom: 1.2rem;
+      //margin-bottom: 1.2rem;
       //box-shadow: 0 0 3px #333;
       //-webkit-box-shadow: 0 0 3px #333;
       //-moz-box-shadow: 0 0 3px #333;
@@ -262,9 +271,12 @@
   }
 
   @media screen and (max-width: 768px) {
+    .index-title{
+      font-size: 1.8rem;
+    }
     .tags {
       .tags-item {
-        padding: .1rem .4rem;
+        padding: 0 .4rem;
         font-size: 1.2rem;
       }
     }
@@ -283,7 +295,7 @@
           }
           .article-info{
             .article-info-title{
-              font-size: 1.7rem;
+              font-size: 1.6rem;
             }
 
             .article-info-others{
@@ -296,7 +308,7 @@
 
         .article-summary-div{
           .article-summary-p{
-            font-size: 1.6rem;
+            font-size: 1.4rem;
           }
         }
 
