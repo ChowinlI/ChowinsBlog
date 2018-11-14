@@ -10,7 +10,7 @@
 <script type="text/ecmascript-6">
   import ArticleText from '../components/ArticleText.vue' //文章组件
   import Comment from '../components/Comments.vue' //评论区组件
-  import CommentTextarea from '../components/CommentTextarea.vue' //评论框组件
+  import CommentTextarea from '../components/CommentBox.vue' //评论框组件
   export default{
     props: [],
     components:{

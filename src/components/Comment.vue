@@ -5,21 +5,25 @@
       <hr>
       <ul class="comment-list">
         <li class="comment-item" v-for="(item,index) in comment">
-          <v-comment-item :comment="item"></v-comment-item>
+          <v-comment-item :comment="item" :index="index" @changeReplyStatus="toReply"></v-comment-item>
         </li>
       </ul>
+      <v-comment-box ref="commentBox" :type="type" :responder="responder" @changeReplyStatus="toReply" @submit="submit" @cancel="cancel"></v-comment-box>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
     import CommentItem from '../components/CommentItem.vue'
+    import CommentBox from '../components/CommentBox.vue'
     export default{
         components:{
-          'v-comment-item': CommentItem
+          'v-comment-item': CommentItem,
+          'v-comment-box': CommentBox
         },
         props: [],
         data(){
             return{
+                responder:"",
                 commenter: "", //评论人
                 type: 0, //评论类型，0为评论作者，1为评论别人的评论，2为评论
                 oldComment: null,
@@ -59,7 +63,48 @@
                   }
                 ]
             }
-        }
+        },
+      methods:{
+            toReply(data){
+                this.type = data.type;
+                this.responder = data.name;
+                this.chosenIndex = data.index;
+                this.$refs.commentBox = "";
+            },
+            submit(data){
+                this.commenter = data.commenter;
+                var time = this.getTime();
+                if(this.chosenIndex == -1){
+                    var item = {name: data.name, time: time, content: data.content,reply:[]};
+                    this.comment.push(item);
+                }else {
+                    var item = { reviewer: this.commenter, responder: this.responder, time: time, content: data.content};
+                    this.comment[this.chosenIndex].reply.push(item)
+                }
+                this.type = 0;
+                this.chosenIndex = -1;
+                this.$refs.commentBox.content = "";
+            },
+            cancel(data){
+                this.type = data.type;
+                this.chosenIndex = data.index;
+                this.commenter  = data.commenter;
+                this.$refs.commentBox.content = ""
+            },
+            getTime(){
+              var date = new Date();
+              var year = date.getFullYear();
+              var month = date.getMonth() + 1;
+              var day = date.getDate();
+              var hour = date.getHours();
+              var minute = date.getMinutes();
+              month.length < 2 ? "0" + month : month;
+              day.length < 2 ? "0" + day : day;
+              hour.length< 2 ? "0" + hour : hour;
+              minute.length < 2 ? "0" + minute : minute;
+              return year + "-" + month + "-" + day + " " + hour + ":" + minute;
+            }
+      }
     }
 </script>
 

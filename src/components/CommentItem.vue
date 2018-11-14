@@ -7,7 +7,10 @@
           <p class="time">{{comment.time}}</p>
         </div>
       </div>
-      <div class="comment-content">{{comment.content}}</div>
+      <div class="comment-content">
+        {{comment.content}}
+        <span class="reply-btn" @click="handleReply(comment.name,1)">回复</span>
+      </div>
       <div class="reply-wrap">
         <ul class="reply-list">
           <li class="reply-item" v-for="item in comment.reply">
@@ -18,7 +21,10 @@
                 <p class="time">{{item.time}}</p>
               </div>
             </div>
-            <div class="reply-content">{{item.content}}</div>
+            <div class="reply-content">
+              {{item.content}}
+              <span class="reply-btn" @click="handleReply(item.reviewer,2)">回复</span>
+            </div>
           </li>
         </ul>
       </div>
@@ -27,14 +33,20 @@
 
 <script type="text/ecmascript-6">
     export default{
-        props: ['comment'],
+        props: ['comment','index'],
         data(){
             return{
 
             }
         },
         created(){
-          console.log(this.comment);
+//          console.log(this.comment);
+        },
+        methods:{
+            handleReply(name,type){
+              var data = {name:name,type:type,index:this.index};
+              this.$emit('changeReplyStatus',data)
+            }
         }
     }
 </script>
