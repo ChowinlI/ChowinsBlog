@@ -19,7 +19,7 @@
           </div>
           <div class="article-info">
             <div class="article-info-title">
-              <a href="">{{item.title}}</a>
+              <router-link to="/article">{{item.title}}</router-link>
             </div>
             <div class="article-info-others">
               <span class="author">{{item.author}}</span>

@@ -70,6 +70,7 @@
                 this.responder = data.name;
                 this.chosenIndex = data.index;
                 this.$refs.commentBox = "";
+                window.location.href = "#comment-box";
             },
             submit(data){
                 this.commenter = data.commenter;
@@ -83,13 +84,15 @@
                 }
                 this.type = 0;
                 this.chosenIndex = -1;
-                this.$refs.commentBox.content = "";
+//                this.$refs.commentBox.content = "";
+                console.log(this.$refs.commentBox.content);
             },
             cancel(data){
                 this.type = data.type;
                 this.chosenIndex = data.index;
                 this.commenter  = data.commenter;
-                this.$refs.commentBox.content = ""
+//                this.$refs.commentBox.content = "";
+              console.log(this.$refs.commentBox.content);
             },
             getTime(){
               var date = new Date();
