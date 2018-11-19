@@ -106,3 +106,68 @@
     }
   }
 }
+
+@media screen and (max-width: 768px){
+  .commentBox{
+    padding: 6px;
+
+    .commentBox-title{
+      font-size: 1.6rem;
+      padding: 0 2px;
+      margin-bottom: .8rem;
+    }
+
+    #comment_form{
+      width: 96%;
+      margin: 0 auto;
+
+      .form-item{
+        margin-bottom: .8rem;
+
+        label{
+          padding: 0 .8rem;
+          font-size: 1.3rem;
+          height: 2.8rem;
+          line-height: 2.8rem;
+        }
+
+        input{
+          height: 2.8rem;
+          font-size: 1.3rem;
+        }
+
+        textarea{
+          font-size: 1.3rem;
+          padding: .8rem;
+        }
+      }
+      .form-footer{
+        button{
+          height: 2.6rem;
+          padding: 0 .8rem;
+          font-size: 1.2rem;
+          border-radius: 4px;
+
+          &:not(:last-child){
+            margin-right: 1rem;
+          }
+        }
+
+        .cancel{
+          background-color: #c5c5c5;
+
+          &:hover{
+            background-color: darken(#c5c5c5,10%);
+          }
+        }
+        .submit{
+          background-color: @primary-color;
+
+          &:hover{
+            background-color: darken(@primary-color,10%);
+          }
+        }
+      }
+    }
+  }
+}

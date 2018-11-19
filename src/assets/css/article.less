@@ -21,7 +21,7 @@
       //border: thin dashed #d5d5d5;
       box-shadow: 0 0 3px #333;
       cursor: pointer;
-      background-color: #d9e8bf;
+      background-color: lighten(@primary-color,20%);
       position: absolute;
       top: 1rem;
 
@@ -42,6 +42,7 @@
     .article-attr{
       width: 100%;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       margin-bottom: 2rem;
@@ -49,9 +50,20 @@
 
       .article-attr-item{
         font-size: 1.4rem;
+        text-align: justify;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
 
         &:not(:last-child){
           margin-right: 1.4rem;
+        }
+
+        &:hover {
+          color: @primary-color;
+        }
+        .iconfont{
+          margin-right: 3px;
         }
       }
     }
@@ -119,10 +131,10 @@
         }
       }
       blockquote{
-        font-size: 1.6rem;
+        font-size: 1.5rem;
       }
       .article-content{
-        font-size: 1.6rem;
+        font-size: 1.5rem;
       }
     }
 

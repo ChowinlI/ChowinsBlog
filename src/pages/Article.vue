@@ -4,10 +4,10 @@
       <div class="tag">真皮沙发</div>
       <div class="article-title"># 文章标题</div>
       <div class="article-attr">
-        <div class="article-attr-item">Chowin</div>
-        <div class="article-attr-item">发表于：2018-11-19 11:30</div>
-        <div class="article-attr-item">评论：7</div>
-        <div class="article-attr-item">阅读数：4396</div>
+        <div class="article-attr-item"><span class="iconfont icon-author"></span><span>Chowin</span></div>
+        <div class="article-attr-item"><span class="iconfont icon-time"></span><span>2018-11-19 11:30</span></div>
+        <div class="article-attr-item"><span class="iconfont icon-comments"></span><span>7</span></div>
+        <div class="article-attr-item"><span class="iconfont icon-views"></span><span>4396</span></div>
       </div>
       <div class="article-content">文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容</div>
       <v-comment></v-comment>

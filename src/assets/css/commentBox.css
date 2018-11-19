@@ -207,3 +207,55 @@
 .commentBox #comment_form .form-footer .submit:hover {
   background-color: #ffa500;
 }
+@media screen and (max-width: 768px) {
+  .commentBox {
+    padding: 6px;
+  }
+  .commentBox .commentBox-title {
+    font-size: 1.6rem;
+    padding: 0 2px;
+    margin-bottom: .8rem;
+  }
+  .commentBox #comment_form {
+    width: 96%;
+    margin: 0 auto;
+  }
+  .commentBox #comment_form .form-item {
+    margin-bottom: .8rem;
+  }
+  .commentBox #comment_form .form-item label {
+    padding: 0 .8rem;
+    font-size: 1.3rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
+  }
+  .commentBox #comment_form .form-item input {
+    height: 2.8rem;
+    font-size: 1.3rem;
+  }
+  .commentBox #comment_form .form-item textarea {
+    font-size: 1.3rem;
+    padding: .8rem;
+  }
+  .commentBox #comment_form .form-footer button {
+    height: 2.6rem;
+    padding: 0 .8rem;
+    font-size: 1.2rem;
+    border-radius: 4px;
+  }
+  .commentBox #comment_form .form-footer button:not(:last-child) {
+    margin-right: 1rem;
+  }
+  .commentBox #comment_form .form-footer .cancel {
+    background-color: #c5c5c5;
+  }
+  .commentBox #comment_form .form-footer .cancel:hover {
+    background-color: #acacac;
+  }
+  .commentBox #comment_form .form-footer .submit {
+    background-color: #ffb733;
+  }
+  .commentBox #comment_form .form-footer .submit:hover {
+    background-color: #ffa500;
+  }
+}
