@@ -9,10 +9,26 @@ FastClick.attach(document.body);
 
 Vue.config.productionTip = false
 
+
+// Vue.directive('scrollShow', {
+//   bind: (el) => {
+//     window.addEventListener('scroll', () => {
+//       if (document.body.scrollTop + 600 > el.offsetTop) {
+//         for (let i = 0; i < el.children.length; i++) {
+//           setTimeout(() => {
+//             el.children[i] ? el.children[i].style.display = 'block' : 0
+//           }, 500 * i)
+//         }
+//       }
+//     })
+//   }
+// })
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   components: { App },
   template: '<App/>'
-})
+});
+

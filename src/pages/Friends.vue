@@ -1,90 +1,27 @@
 <template>
     <div id="friends">
       <section class="friends-section">
-        <h3 class="friends-section-title"># dalao们的TP眼位：</h3>
+        <h3 class="friends-title"># dalao们的TP眼位：</h3>
         <ul class="friends-ul">
-          <li class="friends-li">
+          <li class="friends-li" v-for="item in friends">
             <div class="friends-li-div">
               <div class="friends-pf-img">
-                <img src="../assets/images/pf-photo.jpg">
+                <img :src="item.avatar">
               </div>
               <div class="vertical-line-div">
                 <div class="vertical-line"></div>
               </div>
               <div class="friends-info">
                 <div class="friends-info-name">
-                  <a href="">asd</a>
+                  <a href="">{{item.name}}</a>
                 </div>
                 <div class="friends-info-others">
-                  <span>全栈开发,Web后端开发</span>
+                  <span>{{item.desc}}</span>
                 </div>
               </div>
             </div>
             <div class="friends-li-div">
-              <h4 class="friends-motto">-- 一个程序员</h4>
-            </div>
-          </li>
-          <li class="friends-li">
-            <div class="friends-li-div">
-              <div class="friends-pf-img">
-                <img src="../assets/images/pf-photo.jpg">
-              </div>
-              <div class="vertical-line-div">
-                <div class="vertical-line"></div>
-              </div>
-              <div class="friends-info">
-                <div class="friends-info-name">
-                  <a href="">剑银 丶 涛</a>
-                </div>
-                <div class="friends-info-others">
-                  <span>全栈开发,Web后端开发</span>
-                </div>
-              </div>
-            </div>
-            <div class="friends-li-div">
-              <h4 class="friends-motto">-- 一个程序员</h4>
-            </div>
-          </li>
-          <li class="friends-li">
-            <div class="friends-li-div">
-              <div class="friends-pf-img">
-                <img src="../assets/images/pf-photo.jpg">
-              </div>
-              <div class="vertical-line-div">
-                <div class="vertical-line"></div>
-              </div>
-              <div class="friends-info">
-                <div class="friends-info-name">
-                  <a href="">asd</a>
-                </div>
-                <div class="friends-info-others">
-                  <span>全栈开发,Web后端开发</span>
-                </div>
-              </div>
-            </div>
-            <div class="friends-li-div">
-              <h4 class="friends-motto">-- 一个程序员</h4>
-            </div>
-          </li>
-          <li class="friends-li">
-            <div class="friends-li-div">
-              <div class="friends-pf-img">
-                <img src="../assets/images/pf-photo.jpg">
-              </div>
-              <div class="vertical-line-div">
-                <div class="vertical-line"></div>
-              </div>
-              <div class="friends-info">
-                <div class="friends-info-name">
-                  <a href="">asd</a>
-                </div>
-                <div class="friends-info-others">
-                  <span>全栈开发,Web后端开发</span>
-                </div>
-              </div>
-            </div>
-            <div class="friends-li-div">
-              <h4 class="friends-motto">-- 一个程序员</h4>
+              <h4 class="friends-motto">-- {{item.tag}}</h4>
             </div>
           </li>
         </ul>
@@ -95,7 +32,31 @@
 <script type="text/ecmascript-6">
 
     export default{
-        props: []
+        props: [],
+        data(){
+            return{
+                friends:[
+                  {
+                      name:'asd',
+                      avatar: require('../assets/images/pf-photo3.jpg'),
+                      desc: '全栈开发',
+                      tag: '一个程序员'
+                  },
+                  {
+                    name:'Chowin',
+                    avatar: require('../assets/images/pf-photo2.jpg'),
+                    desc: '233333333333',
+                    tag: '闹着玩的'
+                  },
+                  {
+                    name:'Chowin的小号',
+                    avatar: require('../assets/images/pf-photo.jpg'),
+                    desc: '这样的小号还有好几个',
+                    tag: '闹着玩的'
+                  }
+                ]
+            }
+        }
     }
 </script>
 

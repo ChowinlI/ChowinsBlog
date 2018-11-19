@@ -1,0 +1,75 @@
+@import "keyframes";
+
+#roast{
+  width: 100%;
+
+  .roast-section{
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 4px;
+    color: #333333;
+
+    .roast-title{
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+    hr{
+      margin: 10px 0;
+      border: 0;
+      border-top: thin solid #ddd;
+      border-bottom: thin solid #ffffff;
+    }
+    blockquote{
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border-left: 2px solid @primary-color;
+      padding: .8rem 0 .8rem 1rem;
+      line-height: 3rem;
+      font-size: 1.8rem;
+      margin: 1.6rem 0;
+
+      .blockquote-title{
+        color: darken(@primary-color,20%);
+      }
+
+      .blockquote-paragraph{
+        text-indent: 2em;
+        text-align: justify;
+      }
+    }
+    .roast-paragraph{
+      font-size: 1.8rem;
+      text-indent: 2em;
+      text-align: justify;
+      margin-bottom: .4rem;
+
+      a{
+        color: @primary-color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #roast{
+    .roast-section{
+      .roast-title{
+        font-size: 2rem;
+      }
+      blockquote{
+        font-size: 1.5rem;
+      }
+      .roast-paragraph{
+        font-size: 1.5rem;
+      }
+    }
+
+  }
+}
