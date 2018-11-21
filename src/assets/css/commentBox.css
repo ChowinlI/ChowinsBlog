@@ -242,6 +242,7 @@
     padding: 0 .8rem;
     font-size: 1.2rem;
     border-radius: 4px;
+    touch-action: none;
   }
   .commentBox #comment_form .form-footer button:not(:last-child) {
     margin-right: 1rem;

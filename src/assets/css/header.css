@@ -263,8 +263,8 @@ header .collapse-nav {
   header .header-wrap .collapse-nav {
     display: block;
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 0;
+    left: 10px;
     z-index: 100;
   }
   header .header-wrap .collapse-nav .collapse {

@@ -171,9 +171,6 @@ a:hover {
   width: 100%;
   margin: 0 auto;
 }
-#app .header {
-  overflow: hidden;
-}
 #app .main {
   flex: 1 0 auto;
   order: 1;
