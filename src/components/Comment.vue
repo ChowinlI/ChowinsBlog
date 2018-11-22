@@ -64,19 +64,22 @@
                 ]
             }
         },
+      created(){
+        console.log(this.$refs);
+      },
       methods:{
             toReply(data){
                 this.type = data.type;
                 this.responder = data.name;
                 this.chosenIndex = data.index;
-                this.$refs.commentBox = "";
+                this.$refs.commentBox.content = "";
                 window.location.href = "#comment-box";
             },
             submit(data){
                 this.commenter = data.commenter;
                 var time = this.getTime();
                 if(this.chosenIndex == -1){
-                    var item = {name: data.name, time: time, content: data.content,reply:[]};
+                    var item = {name: data.commenter, time: time, content: data.content,reply:[]};
                     this.comment.push(item);
                 }else {
                     var item = { reviewer: this.commenter, responder: this.responder, time: time, content: data.content};
@@ -93,7 +96,8 @@
                 this.chosenIndex = data.index;
                 this.commenter  = data.commenter;
                 this.$refs.commentBox.content = "";
-//              console.log(this.$refs.commentBox.content);
+                this.$refs.commentBox.nickname = "";
+
             },
             getTime(){
               var date = new Date();

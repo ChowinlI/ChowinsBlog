@@ -9,7 +9,7 @@
     <v-footer class="footer"></v-footer>
     <div class="back-top" @click="scrollToTop">
       <span class="back-top-border"></span>
-        <i class="iconfont icon-backtop"></i>
+      <i class="iconfont icon-backtop"></i>
     </div>
     <canvas id="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;"></canvas>
   </div>

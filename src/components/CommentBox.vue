@@ -46,6 +46,12 @@
         this.content = this.oldComment;
       },
       methods:{
+            contentSetter(content) {
+              this.content = content;
+            },
+            nicknameSetter(nickname) {
+              this.nickname = nickname;
+            },
             cancel:function () {
               this.nickname = "";
               var data = {commenter:"",type:0,index:-1}

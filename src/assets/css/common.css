@@ -202,6 +202,7 @@ a:hover {
   bottom: 2rem;
   right: 2rem;
   height: 3rem;
+  line-height: 3rem;
   width: 3rem;
   z-index: 998;
   font-size: 2rem;
@@ -240,8 +241,6 @@ a:hover {
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.5rem;
-  margin-top: 0.75rem;
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
